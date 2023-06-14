@@ -1,0 +1,137 @@
+:root{
+    font-size: 62.5%;
+}
+
+body, p, h1, h2, h3, h4, h5, h6, ul{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a, li{
+    text-decoration: none;
+    list-style-type: none
+}
+
+body{
+    background-color: rgb(227, 227, 227);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* cores reutilizáveis */
+.logo h1,
+nav ul li a{
+    color: #DA3939;
+}
+
+/* Header */
+header{
+    background-color: #fff;
+
+    padding: 15px 0;
+
+    width: 100%;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 20%;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img{
+    width: 12em;
+}
+
+.logo h1{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo h1 span{
+    font-weight: bold;
+    font-size: clamp(1em, 1em + 1vw, 2.5em);
+}
+
+nav ul{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6em;
+}
+
+nav ul li a{
+    font-size: clamp(0.4em, 0.8em + 1vw, 2.5em);
+    font-weight: 700;
+}
+
+.btn-menu{
+    display: none;
+}
+
+/* Quebras referente ao tamanho do cabeçalho */
+@media screen and (max-width: 1980px) {
+    .cabecalho{
+        margin: 0 10%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .cabecalho{
+        margin: 0 5%;
+    }
+}
+
+/* logo no mobile */
+@media screen and (max-width: 720px){
+    .logo img{
+        width: 5em;
+    }
+}
+
+/* menu mobile */
+@media screen and (max-width: 1200px){
+    nav ul{
+        display: none;
+        background-color: #DA3939;
+        height: 100%;
+        padding: 85px 0 0 0;
+        width: 250px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    nav ul li a{
+        color: #fff;
+        font-weight: 500;
+    }
+
+    nav ul li{
+        margin: 35px 0;
+        text-align: center;
+    }
+    
+    .btn-menu{
+        position: relative;
+        display: block;
+        z-index: 10;
+    }
+
+    nav.active ul{
+        display: block;
+    }
+}
+
+/* Main */
+
+/* Footer */
