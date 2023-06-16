@@ -36,6 +36,12 @@ nav ul li a,
     color: #DA3939;
 }
 
+.secao-2,
+.secao-4 {
+    background-color: #DA3939;
+    color: #fff;
+}
+
 /* Header */
 header {
     background-color: #fff;
@@ -254,11 +260,6 @@ nav ul li a {
 
 /* Segunda seção */
 
-.secao-2 {
-    background-color: #DA3939;
-    color: #fff;
-}
-
 .container-text-2 {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -473,6 +474,49 @@ nav ul li a {
 
 /* Quarta seção */
 
+.secao-4{
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
 
+.secao-4 h2{
+    font-size: clamp(1.8em, 1em + 1.5vw, 3em);
+    font-weight: 100;
+}
+
+.container-4{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-4 i{
+    font-size: clamp(5em, 2em + 1.5vw, 4em);
+}
+
+.container-4 div:last-child{
+    margin: auto;
+}
+
+.container-4 div i:first-child{
+    margin-right: 20px;
+}
+
+.container-4 a{
+    color: #fff;
+}
+
+@media screen and (max-width: 720px){
+    .container-4{
+        flex-direction: column;
+    }
+
+    .container-4 div:first-child{
+        text-align: center;
+    }
+
+    .container-4 div:last-child{
+        margin: 35px auto 0 auto;
+    }
+}
 
 /* -------------------------- Footer -------------------------- */
