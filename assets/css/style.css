@@ -671,6 +671,10 @@ nav ul li a {
     font-size: clamp(5em, 2em + 1.5vw, 4em);
 }
 
+.container-whatsapp a{
+    color: #fff;
+}
+
 @media screen and (max-width: 980px){
     .container-6 .infos-6{
         flex-direction: column;
