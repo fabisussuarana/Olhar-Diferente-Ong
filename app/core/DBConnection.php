@@ -22,7 +22,7 @@
 
         private function makeConnection(): void {
             try {
-                $pdo = new PDO('pgsql:host='. SELF::HOST . ';port=' . SELF::PORT . ';dbname='. SELF::DBNAME, SELF::USER, SELF::PASSWORD);
+                $pdo = new PDO('mysql:host='. SELF::HOST . ';port=' . SELF::PORT . ';dbname='. SELF::DBNAME, SELF::USER, SELF::PASSWORD);
                 $pdo->setAttribute(PDO::ERRMODE_EXCEPTION, PDO::ERRMODE_WARNING);
                 $this->conn = $pdo;
             } catch(PDOException $e) {

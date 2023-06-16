@@ -1,0 +1,18 @@
+{
+    "name": "rodri/olhar-diferente-ong",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "./app/core/constants.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Rodrigo da Silva",
+            "email": "74737267+Rodrigo-bs@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,6 +1,6 @@
 <?php
 
-    namespace App\Core;
+    define('URL', 'http://localhost/olharDiferente-ong');
 
     define('NAME_DB', 'olhardiferente');
     define('HOST_DB', 'localhost');
