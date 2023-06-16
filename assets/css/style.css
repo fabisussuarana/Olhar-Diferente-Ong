@@ -31,6 +31,7 @@ body {
 nav ul li a,
 .container-text-1 p span,
 .secao-1 .olharDiferente,
+.container-text-3 button,
 .secao-3 h1{
     color: #DA3939;
 }
@@ -314,30 +315,50 @@ nav ul li a {
 /* Terceira seção */
 
 .card {
-    width: 28%;
+    width: 100%;
+    height: 450px;
     border-radius: 10px;
     box-shadow: 0px 0px 8px 1px #00000075;
     background-color: #DA3939;
     color: #fff;
-}
-
-.card{
-
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'imagem'
+    'texto'
+    'texto';
 }
 
 .cards-container{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'card-1 card-2 card-3';
+    gap: 5%;
+}
+
+.card-1{
+    grid-area: card-1;
+}
+
+.card-2{
+    grid-area: card-2;
+}
+
+.card-3{
+    grid-area: card-3;
 }
 
 .secao-3{
-    padding-top: 4em;
-    padding-bottom: 4em;
+    padding-top: 5em;
+    padding-bottom: 5em;
 }
 
 .secao-3 img {
     width: 100%;
     border-radius: 10px 10px 0 0;
+    grid-area: imagem;
 }
 
 .secao-3 h1{
@@ -349,29 +370,109 @@ nav ul li a {
 
 .container-text-3{
     padding: 20px;
+    grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container-text-3 h2{
     text-align: center;
     font-size: clamp(1.2em, 1.8em + 1.5vw, 2em);
-    margin-bottom: 1.8em;
+}
+
+.container-text-3 .text{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3em;
+}
+
+.container-text-3 .text p{
+    color: #710303;
+    font-size: clamp(1.5em, 0.6em + 1vw, 1.5em);
+}
+
+.container-text-3 button{
+    margin: 0 auto;
+    display: block;
+}
+
+.container-text-3 button{
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: clamp(1.5em, 1em + 1vw, 1.5em);
+    font-weight: bold;
+}
+
+.text:after {
+    content: '';
+    width: 90%;
+    height: 2px;
+    background: #ffffff2a;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text-pai{
+    position: relative;
 }
 
 @media screen and (max-width: 980px) {
-    .card {
-        width: 70%;
-        margin-bottom: 50px;
-    }
-    
     .cards-container{
-        align-items: center;
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'card-1 card-2'
+        'card-3 .';
+        gap: 3%;
+    }
+    .secao-3{
+        padding-bottom: 9em;
     }
 }
 
-@media screen and (max-width: 720px){
-    .card {
-        width: 100%;
+@media screen and (max-width: 840px){
+    .cards-container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'card-1'
+        'card-2'
+        'card-3';
+        padding-bottom: 5em;
+    }
+
+    .card{
+        height: 530px;
+        width: 70%;
+        margin: 0 auto;
     }
 }
+
+@media screen and (max-width: 760px) {
+    .card{
+        height: 490px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .card{
+        width: 100%;
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .card{
+        height: 430px;
+    }
+}
+
+/* Quarta seção */
+
+
+
 /* -------------------------- Footer -------------------------- */
