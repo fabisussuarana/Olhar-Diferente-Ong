@@ -20,7 +20,9 @@ body{
 
 /* cores reutilizáveis */
 .logo h1,
-nav ul li a{
+nav ul li a,
+.container-text-1 p span,
+.secao-1 .olharDiferente{
     color: #DA3939;
 }
 
@@ -36,8 +38,6 @@ header{
 .cabecalho{
     display: flex;
     justify-content: space-between;
-
-    margin: 0 20%;
 }
 
 .logo{
@@ -48,17 +48,12 @@ header{
 }
 
 .logo img{
-    width: 12em;
+    width: 5em;
 }
 
 .logo h1{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.logo h1 span{
     font-weight: bold;
-    font-size: clamp(1em, 1em + 1vw, 2.5em);
+    font-size: clamp(2em, 1em + 1vw, 2.5em);
 }
 
 nav ul{
@@ -70,7 +65,7 @@ nav ul{
 }
 
 nav ul li a{
-    font-size: clamp(0.4em, 0.8em + 1vw, 2.5em);
+    font-size: clamp(0.4em, 0.5em + 0.7vw, 2.5em);
     font-weight: 700;
 }
 
@@ -78,28 +73,25 @@ nav ul li a{
     display: none;
 }
 
-/* Quebras referente ao tamanho do cabeçalho */
+.container-padding{
+    padding: 0 20%;
+}
+
+/* Quebras para manter as mesmas margens*/
 @media screen and (max-width: 1980px) {
-    .cabecalho{
-        margin: 0 10%;
+    .container-padding{
+        padding: 0 10%;
     }
 }
 
 @media screen and (max-width: 1600px) {
-    .cabecalho{
-        margin: 0 5%;
-    }
-}
-
-/* logo no mobile */
-@media screen and (max-width: 720px){
-    .logo img{
-        width: 5em;
+    .container-padding{
+        padding: 0 5%;
     }
 }
 
 /* menu mobile */
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 980px){
     nav ul{
         background-color: #DA3939;
         display: block;
@@ -113,25 +105,26 @@ nav ul li a{
         transition: .6s;
         overflow-x: hidden;
     }
-
+    
     nav.active ul{
         display: block;
         width: 250px;
         visibility: visible; 
+        z-index: 1000;
     }
-
     
     nav ul li{
         margin: 45px 0;
         text-align: center;
         position: relative;
     }
-
+    
     nav ul li a{
         color: #fff;
         font-weight: 500;
+        font-size: 1.2em;
     }
-
+    
     nav ul li:after {
         content:'';
         width: 200px;
@@ -142,7 +135,7 @@ nav ul li a{
         left: 50%;
         transform: translateX(-50%);
     }
-
+    
     .btn-menu{
         position: relative;
         display: flex;
@@ -152,8 +145,9 @@ nav ul li a{
         border: none;
         background: none;
         cursor: pointer;
+        z-index: 1001;
     }
-
+    
     #hamburguer{
         display: block;
         color: #DA3939;
@@ -161,7 +155,7 @@ nav ul li a{
         width: 20px;
         margin-top: 5px;
     }
-
+    
     #hamburguer::after, #hamburguer::before{
         content: '';
         display: block;
@@ -172,22 +166,84 @@ nav ul li a{
         transition: .3s;
         position: relative; /* porque o top do before só funciona se ele for relative ou absolute */
     }
-
+    
     nav.active #hamburguer{
         border-top: transparent;
         color: #fff;
     }
-
+    
     nav.active #hamburguer::after{
         transform: rotate(135deg);
     }
-
+    
     nav.active #hamburguer::before{
         transform: rotate(-135deg);
         top: 7px;
     }
 }
 
-/* Main */
+/* logo no mobile */
+@media screen and (max-width: 720px){
+    .logo img{
+        width: 5em;
+    }
+}
 
-/* Footer */
+/* -------------------------- Main -------------------------- */
+
+/* Primeira seção */
+.secao-1{
+    background-image: url('../imgs/bg-seção-1-mobile.jpeg');
+    background-size:cover;
+
+}
+
+.container-text-1{
+    color: #fff;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.container-text-1 h1{
+    font-size: clamp(1.5em, 1.5em + 1.5vw, 4em);
+}
+
+.container-text-1 p{
+    font-size: clamp(1em, 1.1em + 1vw, 2em);
+    margin-top: 15px;
+    width: 48%;
+    text-align: justify;
+}
+
+.container-text-1 a{
+    background-color: #44EE55;
+    color: #fff;
+    padding: 1em 1.5em;
+    margin-top: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.container-text-1 a:hover{
+    background-color: #3cbf49;
+    color: #FEFEFE;
+}
+
+/* quebra para o parágrago da seção 1 ficar adequado a tela mobile */
+@media screen and (max-width: 980px){
+    .container-text-1 p{
+        width: 75%;
+        margin-top: 5px;
+    }
+}
+
+/* Segunda seção */
+
+
+
+
+/* Terceira seção */
+
+/* -------------------------- Footer -------------------------- */
