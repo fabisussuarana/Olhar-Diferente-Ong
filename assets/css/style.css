@@ -44,7 +44,6 @@ nav ul li a,
     color: #fff;
 }
 
-.secao-3,
 .secao-4,
 .secao-5 {
     padding-top: 5em;
@@ -99,19 +98,13 @@ nav ul li a {
 }
 
 .container-padding {
-    padding: 0 20%;
+    margin: 0 20%;
 }
 
 /* Quebras para manter as mesmas margens*/
 @media screen and (max-width: 1980px) {
     .container-padding {
-        padding: 0 10%;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .container-padding {
-        padding: 0 5%;
+        margin: 0 10%;
     }
 }
 
@@ -323,16 +316,21 @@ nav ul li a {
 
 /* Terceira seção */
 
+.secao-3 .container-3{
+    margin: 5em 0 7em 0;
+}
+
 .card {
-    width: 100%;
-    height: 450px;
+    max-width: 330px;
+    min-width: 270px;
+    max-height: 450px;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 0px 0px 8px 1px #00000075;
     background-color: #DA3939;
     color: #fff;
-    position: relative;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 80px 120px;
     grid-template-areas:
         'imagem'
         'texto'
@@ -344,7 +342,7 @@ nav ul li a {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
         'card-1 card-2 card-3';
-    gap: 5%;
+    gap: 35px;
 }
 
 .card-1 {
@@ -426,54 +424,25 @@ nav ul li a {
     position: relative;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1140px) {
     .cards-container {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             'card-1 card-2'
             'card-3 .';
-        gap: 3%;
-    }
-
-    .secao-3 {
-        padding-bottom: 9em;
     }
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 760px) {
     .cards-container {
         grid-template-columns: 1fr;
         grid-template-areas:
             'card-1'
             'card-2'
             'card-3';
-        padding-bottom: 5em;
+        /* padding-bottom: 5em; */
     }
 
-    .card {
-        height: 530px;
-        width: 70%;
-        margin: 0 auto;
-    }
-}
-
-@media screen and (max-width: 760px) {
-    .card {
-        height: 490px;
-    }
-}
-
-@media screen and (max-width: 680px) {
-    .card {
-        width: 100%;
-        height: 550px;
-    }
-}
-
-@media screen and (max-width: 490px) {
-    .card {
-        height: 430px;
-    }
 }
 
 /* Quarta seção */
@@ -546,7 +515,7 @@ nav ul li a {
     width: 80%;
 }
 
-.container-5 a{
+.container-5 a {
     background-color: #44EE55;
     color: #fff;
     padding: 1.2em 1.8em;
@@ -557,7 +526,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-.container-5 a:hover{
+.container-5 a:hover {
     background-color: #3cbf49;
     color: #FEFEFE;
 }
@@ -580,12 +549,12 @@ nav ul li a {
         width: 100%;
     }
 
-    .container-5 a{
+    .container-5 a {
         margin: 10px 0;
         text-align: center;
     }
 
-    .container-5 .btn{
+    .container-5 .btn {
         display: flex;
         justify-content: center;
     }
@@ -593,69 +562,70 @@ nav ul li a {
 
 /* Sexta seção */
 
-.container-6{
+.container-6 {
     padding-top: 5em;
     padding-bottom: 5em;
 }
 
-.container-6 h1{
+.container-6 h1 {
     font-size: clamp(2em, 2.5em + 1.5vw, 4em);
     font-weight: 100;
     text-align: center;
     padding-bottom: 1em;
 }
 
-.container-6 .infos-6 h2{
+.container-6 .infos-6 h2 {
     font-size: clamp(1.8em, 1em + 1.5vw, 2.5em);
     text-align: justify;
     padding-right: 20%;
 }
 
-.container-6 .infos-6{
+.container-6 .infos-6 {
     display: flex;
     justify-content: space-between;
 }
 
 .container-6 .infos-6 .container-esquerda,
-.container-6 .infos-6 .container-direita{
+.container-6 .infos-6 .container-direita {
     width: 50%;
 }
 
-.container-6 .infos-6 div div{
-    width: 90%;
+.container-6 .infos-6 div div {
+    width: 100%;
 }
 
-.infos-6 .container-direita{
+.infos-6 .container-direita {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
 }
 
-.container-6 p{
+.container-6 p {
     font-size: 1.7em;
     margin-bottom: 0.5em;
 }
 
-.container-email input{
-    padding: 15px 20px;
+.container-email input {
+    padding: 15px 15px;
     background: transparent;
     border-radius: 5px;
     border: 2px solid #fff;
     color: #fff;
     outline: 0;
     margin-right: 5px;
+    margin-bottom: 10px;
 }
 
-.container-email input::placeholder{
+.container-email input::placeholder {
     font-size: 1.2em;
     color: #ffffff5c;
 }
 
-.container-email button{
+.container-email button {
     background-color: #fff;
     color: #DA3939;
-    padding: 15px 20px;
+    padding: 17px 20px;
     border-radius: 5px;
     font-size: 1.4em;
     font-weight: bold;
@@ -663,25 +633,25 @@ nav ul li a {
     cursor: pointer;
 }
 
-.container-email button:hover{
+.container-email button:hover {
     background-color: #ffffff5c;
 }
 
-.container-whatsapp i{
+.container-whatsapp i {
     font-size: clamp(5em, 2em + 1.5vw, 4em);
 }
 
-.container-whatsapp a{
+.container-whatsapp a {
     color: #fff;
 }
 
-@media screen and (max-width: 980px){
-    .container-6 .infos-6{
+@media screen and (max-width: 980px) {
+    .container-6 .infos-6 {
         flex-direction: column;
     }
 
     .container-6 .infos-6 .container-esquerda,
-    .container-6 .infos-6 .container-direita{
+    .container-6 .infos-6 .container-direita {
         width: 100%;
     }
 
@@ -690,14 +660,73 @@ nav ul li a {
         justify-content: center;
     }
 
-    .container-6 .infos-6 h2{
+    .container-6 .infos-6 h2 {
         padding-right: 0;
     }
 
-    .container-6 .container-esquerda h2{
+    .container-6 .container-esquerda h2 {
         margin-bottom: 2em;
     }
 }
 
 /* -------------------------- Footer -------------------------- */
 
+footer {
+    background-color: #CACACA;
+}
+
+.container-footer {
+    padding-top: 8em;
+    padding-bottom: 8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-footer img {
+    width: 70px;
+}
+
+.container-footer h2 {
+    font-size: 2.7em;
+    color: #DA3939;
+}
+
+footer .container-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer .container-direita i {
+    font-size: 5em;
+    color: #DA3939;
+}
+
+footer .container-esquerda,
+footer .container-direita {
+    width: 50%;
+}
+
+@media screen and (max-width: 980px) {
+    footer .container-esquerda,
+    footer .container-direita {
+        width: 100%;
+    }
+
+    .container-footer{
+        flex-direction: column;
+    }
+
+    footer .container-esquerda{
+        justify-content: center;
+        margin-bottom: 3em;
+    }
+}
+
+footer p{
+    font-size: 1.2em;
+    color: #575757;
+    text-align: center;
+    padding-bottom: 15px;
+}
