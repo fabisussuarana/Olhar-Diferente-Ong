@@ -283,8 +283,8 @@ nav ul li a:hover:after{
 /* Segunda seção */
 
 .container-text-2 {
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 5em;
+    padding-bottom: 5em;
     display: flex;
     justify-content: space-between;
 }
