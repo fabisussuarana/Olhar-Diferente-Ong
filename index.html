@@ -166,9 +166,26 @@
                         </div>
                         <div class="container-direita">
                             <div class="container-email">
-                                <p>Digite seu e-mail:</p>
-                                <input type="email" placeholder="maria@gmail.com">
-                                <button>ENVIAR</button>
+                                <form class="form">
+                                    <div class="input-container">
+                                        <div class="input-box">
+                                            <label for="nome">Nome</label>
+                                            <input type="nome" placeholder="Nome">
+                                        </div>
+    
+                                        <div class="input-box">
+                                            <label for="email">Email</label>
+                                            <input type="email" placeholder="email@gmail.com">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="input-box">
+                                        <label for="conteudo">Conteúdo</label>
+                                        <textarea name="conteudo" id="conteudo" cols="30" rows="10"></textarea>
+                                    </div>
+
+                                    <button>ENVIAR</button>
+                                </form>
                             </div>
                             <div class="container-whatsapp">
                                 <p>Nosso Whatsapp: </p>

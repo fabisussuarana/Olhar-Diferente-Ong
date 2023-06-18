@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container > h3 {
+    margin: 60px 0 40px 0;
+    font-size: 19px;
+    font-family: sans-serif;
+    color: #333333;
+}
+
+.mensagem li {
+    list-style: none;
+}
+
+.mensagem h3 {
+    font-size: 18px;
+    color: #333333;
+    display: block;
+    text-transform: capitalize;
+}
+
+.mensagem span {
+    text-transform: lowercase;
+}
+
+.mensagem p {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #3f3f3f;
+}
