@@ -15,8 +15,8 @@
             parent::__construct('usuario');
         }
         
-        private function setMessage(): bool {
-            $_SESSION['message'] = 'Email inválido.'; 
+        private function setMessage(string $message): bool {
+            $_SESSION['message'] = $message; 
             return true;
         }
 
@@ -27,9 +27,22 @@
                 ]));
 
                 if ($usuario) {
+                    $senhaDec = $this->cript->dec($usuario['senha']);
 
+                    if ($senhaDec === $senha) {
+                        $_SESSION['token'] = $this->cript->enc(json_encode([
+                            'id' => $usuario['id_usuario'],
+                            'nome' => $usuario['nome'],
+                        ]));
+
+                        header('Location: ' . URL . '/visualizar-email.php');
+                        exit;
+                    } else {
+                        $this->setMessage('Senha inválida.');
+                        return false;
+                    }
                 } else {
-                    $this->setMessage();
+                    $this->setMessage('Email inválido.');
                     return false;
                 }
             } catch(PDOException $e) {

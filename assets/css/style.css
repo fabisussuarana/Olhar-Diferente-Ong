@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     font-size: 62.5%;
 }
@@ -596,6 +602,49 @@ nav ul li a.active:after{
 
 /* Sexta seção */
 
+.container-email button {
+    margin-top: 20px;
+    background-color: #fff;
+    color: #DA3939;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.4em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.container-email button:hover {
+    background-color: #ffffff5c;
+}
+
+.input-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.input-box label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form .input-box textarea,
+.form .input-box input {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 15px;
+    background: transparent;
+    width: 100%;
+    display: block;
+    resize: vertical;
+}
+
+.form .input-container {
+    display: flex;
+}
+
 .container-6 {
     padding-top: 5em;
     padding-bottom: 5em;
@@ -638,37 +687,6 @@ nav ul li a.active:after{
 .container-6 p {
     font-size: 1.7em;
     margin-bottom: 0.5em;
-}
-
-.container-email input {
-    padding: 15px 15px;
-    background: transparent;
-    border-radius: 5px;
-    border: 2px solid #fff;
-    color: #fff;
-    outline: 0;
-    margin-right: 5px;
-    margin-bottom: 10px;
-}
-
-.container-email input::placeholder {
-    font-size: 1.2em;
-    color: #ffffff5c;
-}
-
-.container-email button {
-    background-color: #fff;
-    color: #DA3939;
-    padding: 17px 20px;
-    border-radius: 5px;
-    font-size: 1.4em;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-}
-
-.container-email button:hover {
-    background-color: #ffffff5c;
 }
 
 .container-whatsapp i {
