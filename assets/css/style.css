@@ -371,9 +371,9 @@ nav ul li a.active:after{
     display: grid;
     grid-template-rows: 1fr 80px 120px;
     grid-template-areas:
-        'imagem'
+        'imagem',
+        'texto',
         'texto'
-        'texto';
 }
 
 .cards-container {
@@ -639,6 +639,10 @@ nav ul li a.active:after{
     width: 100%;
     display: block;
     resize: vertical;
+}
+
+.form .input-box input::placeholder{
+    color: #710303;
 }
 
 .form .input-container {
